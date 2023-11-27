@@ -7,15 +7,19 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    @EnvironmentObject private var userViewModel : UserViewModel
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView{
+            if userViewModel.isLogin{
+                GreetingView()
+            }else{
+                GreetingView()
+               // LoginView()
+            }
         }
-        .padding()
     }
 }
 
