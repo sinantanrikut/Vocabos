@@ -18,6 +18,12 @@
 		BAAAAC9A2ABF64530055A540 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAAAC992ABF64530055A540 /* Font+Extensions.swift */; };
 		BADCA4912B14CA2F006B115B /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA4902B14CA2F006B115B /* GreetingView.swift */; };
 		BADCA4932B14D131006B115B /* WorkAroundLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA4922B14D131006B115B /* WorkAroundLink.swift */; };
+		BADCA4952B14DB89006B115B /* StandartTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA4942B14DB89006B115B /* StandartTextField.swift */; };
+		BADCA4982B14DBE6006B115B /* Veil in Frameworks */ = {isa = PBXBuildFile; productRef = BADCA4972B14DBE6006B115B /* Veil */; };
+		BADCA49A2B14DE50006B115B /* InputPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA4992B14DE50006B115B /* InputPattern.swift */; };
+		BADCA49D2B14E3A4006B115B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = BADCA49C2B14E3A4006B115B /* GoogleSignIn */; };
+		BADCA49F2B14E3A4006B115B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BADCA49E2B14E3A4006B115B /* GoogleSignInSwift */; };
+		BADCA4A12B14E3EA006B115B /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = BADCA4A02B14E3EA006B115B /* credentials.plist */; };
 		BAEA7E662AB330BB00AF1BD0 /* VocabosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA7E652AB330BB00AF1BD0 /* VocabosApp.swift */; };
 		BAEA7E682AB330BB00AF1BD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA7E672AB330BB00AF1BD0 /* ContentView.swift */; };
 		BAEA7E6A2AB330BD00AF1BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAEA7E692AB330BD00AF1BD0 /* Assets.xcassets */; };
@@ -48,6 +54,9 @@
 		BAAAAC9B2ABF64FF0055A540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BADCA4902B14CA2F006B115B /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		BADCA4922B14D131006B115B /* WorkAroundLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkAroundLink.swift; sourceTree = "<group>"; };
+		BADCA4942B14DB89006B115B /* StandartTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartTextField.swift; sourceTree = "<group>"; };
+		BADCA4992B14DE50006B115B /* InputPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPattern.swift; sourceTree = "<group>"; };
+		BADCA4A02B14E3EA006B115B /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		BAEA7E622AB330BB00AF1BD0 /* Vocabos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vocabos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAEA7E652AB330BB00AF1BD0 /* VocabosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabosApp.swift; sourceTree = "<group>"; };
 		BAEA7E672AB330BB00AF1BD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADCA49F2B14E3A4006B115B /* GoogleSignInSwift in Frameworks */,
+				BADCA4982B14DBE6006B115B /* Veil in Frameworks */,
+				BADCA49D2B14E3A4006B115B /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +140,7 @@
 		BAEA7E642AB330BB00AF1BD0 /* Vocabos */ = {
 			isa = PBXGroup;
 			children = (
+				BADCA4A02B14E3EA006B115B /* credentials.plist */,
 				BAAAAC9B2ABF64FF0055A540 /* Info.plist */,
 				BAEA7E732AB332B400AF1BD0 /* App */,
 				BAEA7E752AB332BC00AF1BD0 /* View */,
@@ -218,6 +231,7 @@
 				BAEA7E922AB456E300AF1BD0 /* Extensions */,
 				BAEA7E8E2AB4564900AF1BD0 /* GlobalHelpers.swift */,
 				BAEA7E902AB456BE00AF1BD0 /* DeviceInfo.swift */,
+				BADCA4992B14DE50006B115B /* InputPattern.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -250,6 +264,7 @@
 			children = (
 				BA9475962ADD571F0095D108 /* Button */,
 				BADCA4922B14D131006B115B /* WorkAroundLink.swift */,
+				BADCA4942B14DB89006B115B /* StandartTextField.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -303,6 +318,11 @@
 			dependencies = (
 			);
 			name = Vocabos;
+			packageProductDependencies = (
+				BADCA4972B14DBE6006B115B /* Veil */,
+				BADCA49C2B14E3A4006B115B /* GoogleSignIn */,
+				BADCA49E2B14E3A4006B115B /* GoogleSignInSwift */,
+			);
 			productName = Vocabos;
 			productReference = BAEA7E622AB330BB00AF1BD0 /* Vocabos.app */;
 			productType = "com.apple.product-type.application";
@@ -331,6 +351,10 @@
 				Base,
 			);
 			mainGroup = BAEA7E592AB330BB00AF1BD0;
+			packageReferences = (
+				BADCA4962B14DBE6006B115B /* XCRemoteSwiftPackageReference "Veil" */,
+				BADCA49B2B14E3A4006B115B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = BAEA7E632AB330BB00AF1BD0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -346,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAAAAC982ABF63BF0055A540 /* Poppins in Resources */,
+				BADCA4A12B14E3EA006B115B /* credentials.plist in Resources */,
 				BAEA7E6D2AB330BD00AF1BD0 /* Preview Assets.xcassets in Resources */,
 				BAEA7E6A2AB330BD00AF1BD0 /* Assets.xcassets in Resources */,
 			);
@@ -358,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADCA49A2B14DE50006B115B /* InputPattern.swift in Sources */,
 				BADCA4932B14D131006B115B /* WorkAroundLink.swift in Sources */,
 				BAEA7E8F2AB4564900AF1BD0 /* GlobalHelpers.swift in Sources */,
 				BAEA7E982AB4572D00AF1BD0 /* ErrorType.swift in Sources */,
@@ -378,6 +404,7 @@
 				BAEA7E942AB456F200AF1BD0 /* Data+Extensions.swift in Sources */,
 				BAEA7E802AB4549900AF1BD0 /* BaseViewModel.swift in Sources */,
 				BAAAAC912ABF5F350055A540 /* Image+Extensions.swift in Sources */,
+				BADCA4952B14DB89006B115B /* StandartTextField.swift in Sources */,
 				BA9475982ADD57290095D108 /* PrimaryButton.swift in Sources */,
 				BAEA7E912AB456BE00AF1BD0 /* DeviceInfo.swift in Sources */,
 				BAAAAC952ABF61670055A540 /* HomeView.swift in Sources */,
@@ -583,6 +610,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BADCA4962B14DBE6006B115B /* XCRemoteSwiftPackageReference "Veil" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DanielCardonaRojas/Veil";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+		BADCA49B2B14E3A4006B115B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BADCA4972B14DBE6006B115B /* Veil */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BADCA4962B14DBE6006B115B /* XCRemoteSwiftPackageReference "Veil" */;
+			productName = Veil;
+		};
+		BADCA49C2B14E3A4006B115B /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BADCA49B2B14E3A4006B115B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		BADCA49E2B14E3A4006B115B /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BADCA49B2B14E3A4006B115B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BAEA7E5A2AB330BB00AF1BD0 /* Project object */;
 }
