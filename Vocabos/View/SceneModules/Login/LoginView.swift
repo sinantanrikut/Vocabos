@@ -6,11 +6,23 @@
 //
 
 import SwiftUI
+import GoogleSignIn
+import GoogleSignInSwift
+import FirebaseAuth
+
+
+struct GoogleSignInResulModel {
+    let idToken: String
+    let accessToken: String
+
+}
 
 struct LoginView: View {
+    
+    @ObservedObject private var viewModel  = UserViewModel()
     @State private var username = ""
     @State private var password = ""
-    
+    @Binding var showSignInView : Bool
     var body: some View {
         VStack(alignment: .center,spacing: 10){
             Image("logo")
@@ -36,7 +48,7 @@ struct LoginView: View {
             }
             .padding(.bottom,30)
             
-            StandartTextField(value: $username, fieldName: "phone-number", contentType: .telephoneNumber, keyboardType: .numberPad, pattern: .phoneNumber, isFocused: true)
+          StandartTextField(value: $username, fieldName: "phone-number", contentType: .telephoneNumber, keyboardType: .numberPad, pattern: .phoneNumber)
             
             PrimaryButton(buttonText: "Login")
                 .padding(.top)
@@ -53,19 +65,29 @@ struct LoginView: View {
                 .font(.setCustom(fontStyle: .callout, fontWeight: .regular))
                 .padding(.top,30)
             
-            PrimaryButton(buttonText: "Google Login")
+            GoogleSignInButton(viewModel: GoogleSignInButtonViewModel(scheme: .dark,style: .wide, state: .normal)){
+                Task{
+                    do{
+                        try await viewModel.signInGoogle()
+                        showSignInView = false
+                    }catch{
+                     print(error)
+                    }
+                }
+            }
                 .padding(.top)
             
         }
         .frame(maxWidth: .infinity)
         .padding([.leading,.trailing],20)
+        .workaroundLink(to: HomeView().navigationBarBackButtonHidden(), isActive: $viewModel.isLogin)
         
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
+//struct LoginView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginView(showSignInView: false)
+//    }
+//}
 

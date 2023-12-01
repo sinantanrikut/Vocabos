@@ -4,6 +4,21 @@
 <dict>
 	<key></key>
 	<string></string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>Google Sign in</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1033656307270-0tshq2u0bv9j9ocoji70kalk7q66np7j</string>
+			</array>
+		</dict>
+	</array>
+	<key>GIDClientID</key>
+	<string>1033656307270-0tshq2u0bv9j9ocoji70kalk7q66np7j.apps.googleusercontent.com</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Poppins-Regular.ttf</string>

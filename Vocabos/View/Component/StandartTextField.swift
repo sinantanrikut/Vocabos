@@ -11,7 +11,10 @@ import Veil
 
 struct StandartTextField: View {
     @Binding var value: String
-    @State var fieldName: LocalizedStringKey
+    @State private var isClicked: Bool = false
+    @FocusState private var isInputActive: Bool
+
+    var fieldName: LocalizedStringKey
     var contentType: UITextContentType?
     var keyboardType: UIKeyboardType = .default
     var pattern: InputPattern?
@@ -21,35 +24,27 @@ struct StandartTextField: View {
     var balance: Double?
     var canCopy = false
     var fontStyle: Font.TextStyle = .title3
-//    var fontWeight: CustomFont = .semibold
     var fontWeight: Font.Weight = .semibold
     var height: CGFloat = 56
     var limit: Int?
     var icon: Image?
     var autoCapitalization: TextInputAutocapitalization = .sentences
     var action: (() -> ())?
-    
-    
+
     private var patternMask: Veil? {
         guard let pattern = pattern else { return nil }
         return Veil(pattern: pattern.rawValue)
     }
-    
-    @State private var isClicked: Bool = false
-    
-    @FocusState private var isInputActive: Bool
-//    @FocusState private var focusedField: FocusedField?
-    
+
     var isEditing: Bool {
         isClicked || !value.isEmpty
     }
-    
+
     var balanceText: String {
         "balance"
     }
-    
+
     var body: some View {
-        
         ZStack(alignment: .leading) {
             if isPassword {
                 // Placeholder
@@ -59,7 +54,6 @@ struct StandartTextField: View {
                     .offset(y: isEditing ? -14 : 0)
                     .padding()
 
-                
                 SecureField("", text: $value)
                     .onChange(of: value) { newValue in
                         if let limit = limit, limit > 0, newValue.count > limit {
@@ -72,14 +66,14 @@ struct StandartTextField: View {
                     .font(.setCustom(fontStyle: fontStyle, fontWeight: .bold))
                     .keyboardType(keyboardType)
                     .textContentType(contentType)
-                    .foregroundColor(Color.mainColor)
+                    .foregroundColor(Color.black)
                     .focused($isInputActive)
                     .textInputAutocapitalization(autoCapitalization)
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
                             Spacer()
                             if isInputActive {
-                                Button("Done") {
+                                Button("Tamam") {
                                     isInputActive = false
                                 }
                             }
@@ -123,7 +117,7 @@ struct StandartTextField: View {
                     ToolbarItemGroup(placement: .keyboard) {
                         Spacer()
                         if isInputActive {
-                            Button("Done") {
+                            Button("Tamam") {
                                 isInputActive = false
                             }
                         }
@@ -138,32 +132,15 @@ struct StandartTextField: View {
                 )
             }
 
-
             HStack(spacing: 1) {
                 Spacer()
-                
-                if let _ = balance {
-                    Text(balanceText)
-                        .font(.setCustom(fontStyle: .subheadline, fontWeight: .regular))
-                        .foregroundColor(.mainColor)
-                }
-                
-                if canCopy {
-                    Button {
-                        copyText()
-                    } label: {
-                       
-                    }
-                    .foregroundColor(.mainColor)
-                    .padding(.trailing, -10)
-                }
-                
-                if let icon {
-                    icon
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 20, height: 20)
-                }
+
+          
+
+                icon?
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20, height: 20)
             }
             .padding(.trailing)
         }
@@ -179,12 +156,10 @@ struct StandartTextField: View {
         .onTapGesture {
             action?()
         }
-        .accentColor(Color.mainColor)
+        .accentColor(Color.black)
         .tint(Color.mainColor)
     }
-}
 
-extension StandartTextField {
     private func copyText() {
         UIPasteboard.general.string = value
     }
@@ -203,5 +178,3 @@ struct StandartTextField_Previews: PreviewProvider {
             .preferredColorScheme(.dark)
     }
 }
-
-

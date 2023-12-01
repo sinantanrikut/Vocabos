@@ -13,10 +13,10 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
-            if userViewModel.isLogin{
+            if AppUserDefaults.uid.isEmpty{
                 GreetingView()
             }else{
-                GreetingView()
+                HomeView()
                // LoginView()
             }
         }

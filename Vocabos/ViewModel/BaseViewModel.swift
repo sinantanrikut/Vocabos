@@ -8,12 +8,12 @@
 import Combine
 import SwiftUI
 
+@MainActor
 class BaseViewModel: ObservableObject {
         
     // MARK: - Cancellables
     var cancellable: Cancellable?
     var cancellable2: Cancellable?
-
 
 }
 

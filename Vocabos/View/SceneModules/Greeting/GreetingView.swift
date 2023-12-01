@@ -40,7 +40,7 @@ struct GreetingView: View {
             .padding()
         }
         .frame(maxWidth: .infinity,maxHeight: .infinity)
-        .workaroundLink(to: LoginView(), isActive: $goLogin)
+        .workaroundLink(to: LoginView(showSignInView: .constant(true)), isActive: $goLogin)
     }
 }
 
