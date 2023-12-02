@@ -156,8 +156,7 @@ struct StandartTextField: View {
         .onTapGesture {
             action?()
         }
-        .accentColor(Color.black)
-        .tint(Color.mainColor)
+        .tint(Color.black)
     }
 
     private func copyText() {

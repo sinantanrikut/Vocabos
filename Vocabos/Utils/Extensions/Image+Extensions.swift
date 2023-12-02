@@ -24,7 +24,9 @@ extension Image {
     enum ImageName: String {
         case logo
         case greeting_bg
-  
+        case france
+        case arrow_down
+        case menu_icon
     }
     
 }

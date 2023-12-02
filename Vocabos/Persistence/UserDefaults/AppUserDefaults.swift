@@ -14,4 +14,6 @@ struct AppUserDefaults {
     static var email: String
     @UserDefault(key: UserDefaultsKey.photo_url.rawValue, default: "")
     static var photo_url: String
+    @UserDefault(key: UserDefaultsKey.name_surname.rawValue, default: "")
+    static var name_surname: String
 }

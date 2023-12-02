@@ -10,6 +10,7 @@ import SwiftUI
 extension Color{
     
     static let mainColor = Color("mainColor")
+    static let borderGray = Color("borderGray")
 
     
     init(hex: String?) {

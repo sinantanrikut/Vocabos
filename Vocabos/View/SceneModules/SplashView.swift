@@ -10,9 +10,8 @@ import SwiftUI
 struct SplashView: View {
     var body: some View {
         ZStack {
-            Color.mainColor
-                .opacity(0.2)
-            
+            Color.white
+                      
             VStack {
                 Image("logo")
                     .resizable()

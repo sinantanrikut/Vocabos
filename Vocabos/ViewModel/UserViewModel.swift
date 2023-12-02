@@ -13,7 +13,7 @@ import FirebaseAuth
 final class UserViewModel: BaseViewModel {
         
     @Published var isLogin = false
-
+    
     func signInGoogle() async throws {
         guard let topVC = Utilities.shared.topViewController() else {
             throw URLError(.cannotFindHost)

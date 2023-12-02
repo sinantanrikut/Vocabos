@@ -11,12 +11,6 @@ import GoogleSignInSwift
 import FirebaseAuth
 
 
-struct GoogleSignInResulModel {
-    let idToken: String
-    let accessToken: String
-
-}
-
 struct LoginView: View {
     
     @ObservedObject private var viewModel  = UserViewModel()

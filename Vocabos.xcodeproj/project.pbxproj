@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		BA169FA32ABF5D1300D34DBF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA169FA22ABF5D1300D34DBF /* LoginView.swift */; };
 		BA169FA62ABF5D5600D34DBF /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA169FA52ABF5D5600D34DBF /* SplashView.swift */; };
+		BA2B14412B1BC849004351F6 /* GoogleSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2B14402B1BC849004351F6 /* GoogleSignInModel.swift */; };
+		BA2B14442B1BC885004351F6 /* AuthDataResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2B14432B1BC885004351F6 /* AuthDataResultModel.swift */; };
+		BA2B14462B1BC8B9004351F6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2B14452B1BC8B9004351F6 /* UserModel.swift */; };
+		BA2B14492B1BD1E2004351F6 /* StandartBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2B14482B1BD1E2004351F6 /* StandartBackground.swift */; };
+		BA2B144C2B1BD7F0004351F6 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = BA2B144B2B1BD7F0004351F6 /* URLImage */; };
+		BA2B144E2B1BD7F0004351F6 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = BA2B144D2B1BD7F0004351F6 /* URLImageStore */; };
 		BA9459382B1A5ACC0064798F /* credential.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA9459372B1A5ACC0064798F /* credential.plist */; };
 		BA94593C2B1A5DFF0064798F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA94593B2B1A5DFF0064798F /* GoogleService-Info.plist */; };
 		BA94593F2B1A65730064798F /* AppUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA94593E2B1A65730064798F /* AppUserDefaults.swift */; };
@@ -53,6 +59,10 @@
 /* Begin PBXFileReference section */
 		BA169FA22ABF5D1300D34DBF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BA169FA52ABF5D5600D34DBF /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		BA2B14402B1BC849004351F6 /* GoogleSignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInModel.swift; sourceTree = "<group>"; };
+		BA2B14432B1BC885004351F6 /* AuthDataResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataResultModel.swift; sourceTree = "<group>"; };
+		BA2B14452B1BC8B9004351F6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		BA2B14482B1BD1E2004351F6 /* StandartBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartBackground.swift; sourceTree = "<group>"; };
 		BA9459372B1A5ACC0064798F /* credential.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credential.plist; sourceTree = "<group>"; };
 		BA94593B2B1A5DFF0064798F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA94593E2B1A65730064798F /* AppUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserDefaults.swift; sourceTree = "<group>"; };
@@ -95,10 +105,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA2B144E2B1BD7F0004351F6 /* URLImageStore in Frameworks */,
 				BADCA4B02B14E73D006B115B /* GoogleSignIn in Frameworks */,
 				BADCA49F2B14E3A4006B115B /* GoogleSignInSwift in Frameworks */,
 				BADCA4B22B14E73D006B115B /* GoogleSignInSwift in Frameworks */,
 				BADCA4982B14DBE6006B115B /* Veil in Frameworks */,
+				BA2B144C2B1BD7F0004351F6 /* URLImage in Frameworks */,
 				BADCA4B72B14EF76006B115B /* FirebaseAuth in Frameworks */,
 				BADCA49D2B14E3A4006B115B /* GoogleSignIn in Frameworks */,
 			);
@@ -113,6 +125,24 @@
 				BA169FA22ABF5D1300D34DBF /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		BA2B14422B1BC879004351F6 /* GoogleSign */ = {
+			isa = PBXGroup;
+			children = (
+				BA2B14432B1BC885004351F6 /* AuthDataResultModel.swift */,
+				BA2B14402B1BC849004351F6 /* GoogleSignInModel.swift */,
+				BA2B14452B1BC8B9004351F6 /* UserModel.swift */,
+			);
+			path = GoogleSign;
+			sourceTree = "<group>";
+		};
+		BA2B14472B1BD1D9004351F6 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				BA2B14482B1BD1E2004351F6 /* StandartBackground.swift */,
+			);
+			path = Background;
 			sourceTree = "<group>";
 		};
 		BA94593D2B1A65620064798F /* UserDefaults */ = {
@@ -228,6 +258,7 @@
 		BAEA7E742AB332B900AF1BD0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA2B14422B1BC879004351F6 /* GoogleSign */,
 				BAEA7E822AB454BA00AF1BD0 /* Request */,
 				BAEA7E812AB454B600AF1BD0 /* Response */,
 			);
@@ -318,6 +349,7 @@
 		BAEA7E7E2AB4548100AF1BD0 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				BA2B14472B1BD1D9004351F6 /* Background */,
 				BA9475962ADD571F0095D108 /* Button */,
 				BADCA4922B14D131006B115B /* WorkAroundLink.swift */,
 				BADCA4942B14DB89006B115B /* StandartTextField.swift */,
@@ -381,6 +413,8 @@
 				BADCA4AF2B14E73D006B115B /* GoogleSignIn */,
 				BADCA4B12B14E73D006B115B /* GoogleSignInSwift */,
 				BADCA4B62B14EF76006B115B /* FirebaseAuth */,
+				BA2B144B2B1BD7F0004351F6 /* URLImage */,
+				BA2B144D2B1BD7F0004351F6 /* URLImageStore */,
 			);
 			productName = Vocabos;
 			productReference = BAEA7E622AB330BB00AF1BD0 /* Vocabos.app */;
@@ -414,6 +448,7 @@
 				BADCA4962B14DBE6006B115B /* XCRemoteSwiftPackageReference "Veil" */,
 				BADCA49B2B14E3A4006B115B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				BADCA4A22B14E552006B115B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BA2B144A2B1BD7F0004351F6 /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = BAEA7E632AB330BB00AF1BD0 /* Products */;
 			projectDirPath = "";
@@ -447,12 +482,14 @@
 				BA9459412B1A65970064798F /* UserDefault.swift in Sources */,
 				BADCA49A2B14DE50006B115B /* InputPattern.swift in Sources */,
 				BADCA4932B14D131006B115B /* WorkAroundLink.swift in Sources */,
+				BA2B14412B1BC849004351F6 /* GoogleSignInModel.swift in Sources */,
 				BAEA7E8F2AB4564900AF1BD0 /* GlobalHelpers.swift in Sources */,
 				BAEA7E982AB4572D00AF1BD0 /* ErrorType.swift in Sources */,
 				BA94593F2B1A65730064798F /* AppUserDefaults.swift in Sources */,
 				BADCA4B42B14ECBA006B115B /* Utilities.swift in Sources */,
 				BAAAAC9A2ABF64530055A540 /* Font+Extensions.swift in Sources */,
 				BA169FA62ABF5D5600D34DBF /* SplashView.swift in Sources */,
+				BA2B14462B1BC8B9004351F6 /* UserModel.swift in Sources */,
 				BADCA4BA2B14F08A006B115B /* AuthenticationManager.swift in Sources */,
 				BAEA7E892AB4556600AF1BD0 /* EndPoint.swift in Sources */,
 				BADCA4912B14CA2F006B115B /* GreetingView.swift in Sources */,
@@ -460,12 +497,14 @@
 				BAEA7E962AB4571F00AF1BD0 /* ErrorResponse.swift in Sources */,
 				BAEA7E872AB4553E00AF1BD0 /* ServiceProvider.swift in Sources */,
 				BAAAAC932ABF602B0055A540 /* UserViewModel.swift in Sources */,
+				BA2B14492B1BD1E2004351F6 /* StandartBackground.swift in Sources */,
 				BAEA7E8B2AB455B200AF1BD0 /* BaseRequest.swift in Sources */,
 				BAEA7E682AB330BB00AF1BD0 /* ContentView.swift in Sources */,
 				BA169FA32ABF5D1300D34DBF /* LoginView.swift in Sources */,
 				BAEA7E662AB330BB00AF1BD0 /* VocabosApp.swift in Sources */,
 				BAAAAC8F2ABF5E870055A540 /* Color+Extensions.swift in Sources */,
 				BAEA7E8D2AB455F700AF1BD0 /* ApiCallListenerManager.swift in Sources */,
+				BA2B14442B1BC885004351F6 /* AuthDataResultModel.swift in Sources */,
 				BAEA7E942AB456F200AF1BD0 /* Data+Extensions.swift in Sources */,
 				BAEA7E802AB4549900AF1BD0 /* BaseViewModel.swift in Sources */,
 				BAAAAC912ABF5F350055A540 /* Image+Extensions.swift in Sources */,
@@ -684,6 +723,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BA2B144A2B1BD7F0004351F6 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
 		BADCA4962B14DBE6006B115B /* XCRemoteSwiftPackageReference "Veil" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/DanielCardonaRojas/Veil";
@@ -711,6 +758,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BA2B144B2B1BD7F0004351F6 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA2B144A2B1BD7F0004351F6 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		BA2B144D2B1BD7F0004351F6 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA2B144A2B1BD7F0004351F6 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
 		BADCA4972B14DBE6006B115B /* Veil */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BADCA4962B14DBE6006B115B /* XCRemoteSwiftPackageReference "Veil" */;

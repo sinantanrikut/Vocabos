@@ -11,6 +11,6 @@ enum UserDefaultsKey: String {
     case uid
     case email
     case photo_url
-
-
+    case name_surname
+    
 }
